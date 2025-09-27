@@ -11,7 +11,7 @@ A key feature of this project is its focus on model interpretability. By applyin
 
 *Figure: Original image of a soybean leaf with potassium deficiency (left), its Grad-CAM++ heatmap (middle), and the heatmap overlaid on the original image, showing the model focusing on the discolored regions.*
 
-***
+
 
 ## Features
 - **Custom CNN Architecture:** A lightweight and effective CNN model designed specifically for this classification task.
@@ -28,8 +28,9 @@ The model was trained on a comprehensive dataset of soybean leaf images [https:/
 - Backerial Blight
 - Frogeye leaf spot
 - Potassium deficiency
+  
 <img src = "/images/data_distribution.svg">
-***
+
 
 ## Methodology
 
@@ -38,7 +39,9 @@ The dataset is loaded and partitioned into training (80%), validation (10%), and
 
 ### 2. Custom CNN Architecture
 The designed model follows a classic CNN structure, progressively extracting more complex features from the images. The architecture has been visualized in the below image.
+
 <img src = "/images/model_arch.png">
+
 
 | Layer Type | Filters / Units | Activation | Notes |
 | :--- | :--- | :--- | :--- |
@@ -53,8 +56,6 @@ The designed model follows a classic CNN structure, progressively extracting mor
 A key aspect of this project is the use of two distinct models:
 - **Training Model:** Includes the `data_augmentation` layers. This model is used exclusively for training.
 - **Inference Model:** The learned weights from the training model are transferred to an identical architecture *without* the augmentation layers. This ensures that predictions and Grad-CAM visualizations are clean and based on the original input image.
-
-***
 
 ## Results
 The model achieves excellent performance on the test set, demonstrating its effectiveness in classifying soybean diseases.
