@@ -1,17 +1,15 @@
 # LeafSense - Explainable Soybean Leaf Disease Detection
 
-![GitHub top language](https://img.shields.io/github/languages/top/your-username/your-repo?style=for-the-badge&color=blue)
+![GitHub top language](https://img.shields.io/github/languages/top/jatinpatil06/leafsense?style=for-the-badge&color=blue)
 ![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)
 
 This project presents a deep learning approach for the early and accurate detection of soybean leaf diseases. Soybean leaf diseases pose a significant threat to agricultural productivity, especially in regions like Maharashtra, India, where timely identification is crucial. A custom-built **Convolutional Neural Network (CNN)** is implemented in TensorFlow and Keras to classify various diseases from leaf images.
 
 A key feature of this project is its focus on model interpretability. By applying **Grad-CAM (Gradient-weighted Class Activation Mapping)** and **Grad-CAM++**, we can visualize the regions of the leaf image that our model focuses on when making a prediction. This helps in understanding the model's decision-making process and building trust in its diagnostic capabilities, which is crucial for real-world agricultural applications.
 
-![Potassium Deficiency with Grad-CAM]
-
 <img src = "images/explanations.png">
 
-]*Figure: Original image of a soybean leaf with potassium deficiency (left), its Grad-CAM++ heatmap (middle), and the heatmap overlaid on the original image, showing the model focusing on the discolored regions.*
+*Figure: Original image of a soybean leaf with potassium deficiency (left), its Grad-CAM++ heatmap (middle), and the heatmap overlaid on the original image, showing the model focusing on the discolored regions.*
 
 ***
 
@@ -30,7 +28,7 @@ The model was trained on a comprehensive dataset of soybean leaf images [https:/
 - Backerial Blight
 - Frogeye leaf spot
 - Potassium deficiency
-
+<img src = "/images/data_distribution.svg">
 ***
 
 ## Methodology
