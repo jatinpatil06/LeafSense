@@ -1,6 +1,6 @@
 # LeafSense - Explainable Soybean Leaf Disease Detection
 
-![GitHub top language](https://img.shields.io/github/languages/top/your-username/your-repo?style=for-the-badge&color=blue)
+![GitHub top language](https://img.shields.io/github/languages/top/jatinpatil06/leafsense?style=for-the-badge&color=blue)
 ![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)
 
 This project presents a deep learning approach for the early and accurate detection of soybean leaf diseases. Soybean leaf diseases pose a significant threat to agricultural productivity, especially in regions like Maharashtra, India, where timely identification is crucial. A custom-built **Convolutional Neural Network (CNN)** is implemented in TensorFlow and Keras to classify various diseases from leaf images.
