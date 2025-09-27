@@ -36,7 +36,8 @@ The model was trained on a comprehensive dataset of soybean leaf images [https:/
 The dataset is loaded and partitioned into training (80%), validation (10%), and testing (10%) sets. The training data goes through a series of on-the-fly augmentations to create a more robust mode. All images are standardized to a size of $256\times256$ pixels to align with model input requirements.
 
 ### 2. Custom CNN Architecture
-Our model follows a classic CNN structure, progressively extracting more complex features from the images.
+The designed model follows a classic CNN structure, progressively extracting more complex features from the images. The architecture has been visualized in the below image.
+<img src = "/images/model_arch.png">
 
 | Layer Type | Filters / Units | Activation | Notes |
 | :--- | :--- | :--- | :--- |
