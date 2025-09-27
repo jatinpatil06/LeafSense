@@ -7,8 +7,11 @@ This project presents a deep learning approach for the early and accurate detect
 
 A key feature of this project is its focus on model interpretability. By applying **Grad-CAM (Gradient-weighted Class Activation Mapping)** and **Grad-CAM++**, we can visualize the regions of the leaf image that our model focuses on when making a prediction. This helps in understanding the model's decision-making process and building trust in its diagnostic capabilities, which is crucial for real-world agricultural applications.
 
-![Potassium Deficiency with Grad-CAM](https://i.imgur.com/8a6B8Jc.png)
-[cite_start]*Figure: Original image of a soybean leaf with potassium deficiency (left) and its Grad-CAM++ heatmap (right), showing the model focusing on the discolored regions[cite: 263, 260].*
+![Potassium Deficiency with Grad-CAM]
+
+<img src = "images/explanations.png">
+
+]*Figure: Original image of a soybean leaf with potassium deficiency (left), its Grad-CAM++ heatmap (middle), and the heatmap overlaid on the original image, showing the model focusing on the discolored regions.*
 
 ***
 
