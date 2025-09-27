@@ -1,12 +1,11 @@
-# Soybean Leaf Disease Detection using CNN with Grad-CAM Visualization
+# LeafSense - Explainable Soybean Leaf Disease Detection
 
-![GitHub language count](https://img.shields.io/github/languages/count/your-username/your-repo?style=for-the-badge)
 ![GitHub top language](https://img.shields.io/github/languages/top/your-username/your-repo?style=for-the-badge&color=blue)
 ![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)
 
-This project presents a deep learning approach for the early and accurate detection of soybean leaf diseases. [cite_start]Soybean leaf diseases pose a significant threat to agricultural productivity, especially in regions like Maharashtra, India, where timely identification is crucial[cite: 27]. We use a custom-built **Convolutional Neural Network (CNN)** implemented in TensorFlow and Keras to classify various diseases from leaf images.
+This project presents a deep learning approach for the early and accurate detection of soybean leaf diseases. Soybean leaf diseases pose a significant threat to agricultural productivity, especially in regions like Maharashtra, India, where timely identification is crucial. A custom-built **Convolutional Neural Network (CNN)** is implemented in TensorFlow and Keras to classify various diseases from leaf images.
 
-A key feature of this work is its focus on model interpretability. [cite_start]By applying **Grad-CAM (Gradient-weighted Class Activation Mapping)** and **Grad-CAM++**, we can visualize the regions of the leaf image that our model focuses on when making a prediction[cite: 257]. [cite_start]This helps in understanding the model's decision-making process and building trust in its diagnostic capabilities, which is crucial for real-world agricultural applications[cite: 262].
+A key feature of this project is its focus on model interpretability. By applying **Grad-CAM (Gradient-weighted Class Activation Mapping)** and **Grad-CAM++**, we can visualize the regions of the leaf image that our model focuses on when making a prediction. This helps in understanding the model's decision-making process and building trust in its diagnostic capabilities, which is crucial for real-world agricultural applications.
 
 ![Potassium Deficiency with Grad-CAM](https://i.imgur.com/8a6B8Jc.png)
 [cite_start]*Figure: Original image of a soybean leaf with potassium deficiency (left) and its Grad-CAM++ heatmap (right), showing the model focusing on the discolored regions[cite: 263, 260].*
@@ -15,21 +14,18 @@ A key feature of this work is its focus on model interpretability. [cite_start]B
 
 ## Features
 - **Custom CNN Architecture:** A lightweight and effective CNN model designed specifically for this classification task.
-- **Robust Data Augmentation:** Utilizes techniques like random flipping, rotation, zooming, and contrast adjustments to improve model generalization and prevent overfitting[cite: 125].
+- **Robust Data Augmentation:** Utilizes techniques like random flipping, rotation, zooming, and contrast adjustments to improve model generalization and prevent overfitting.
 - **Separate Training & Inference Models:** A clean implementation that uses a separate model for inference, ensuring that Grad-CAM visualizations are generated on original, non-augmented images.
-- **Detailed Performance Evaluation:** The model's performance is thoroughly evaluated using metrics such as Accuracy, Precision, Recall, F1-Score, and a Confusion Matrix[cite: 221].
-- **Model Interpretability:** Implements Grad-CAM to provide visual explanations for the model's predictions, making the "black box" more transparent[cite: 257].
+- **Detailed Performance Evaluation:** The model's performance is thoroughly evaluated using metrics such as Accuracy, Precision, Recall, F1-Score, and a Confusion Matrix.
+- **Model Interpretability:** Implements Grad-CAM to provide visual explanations for the model's predictions, making the "black box" more transparent.
 
 ***
 
 ## Dataset
-The model was trained on a comprehensive dataset of soybean leaf images from Kaggle[cite: 117]. The dataset is categorized into seven classes[cite: 117]:
+The model was trained on a comprehensive dataset of soybean leaf images [https://datadryad.org/dataset/doi:10.5061/dryad.41ns1rnj3]. We have considered 4 classes,
 - Healthy
-- Cercospora leaf blight
-- Downey mildew
+- Backerial Blight
 - Frogeye leaf spot
-- Soybean rust
-- Target spot
 - Potassium deficiency
 
 ***
@@ -37,7 +33,7 @@ The model was trained on a comprehensive dataset of soybean leaf images from Kag
 ## Methodology
 
 ### 1. Data Preprocessing & Augmentation
-The dataset is loaded and partitioned into training (80%), validation (10%), and testing (10%) sets. The training data goes through a series of on-the-fly augmentations to create a more robust model[cite: 125]. All images are standardized to a size of $224\times224$ pixels to align with model input requirements[cite: 123].
+The dataset is loaded and partitioned into training (80%), validation (10%), and testing (10%) sets. The training data goes through a series of on-the-fly augmentations to create a more robust mode. All images are standardized to a size of $256\times256$ pixels to align with model input requirements.
 
 ### 2. Custom CNN Architecture
 Our model follows a classic CNN structure, progressively extracting more complex features from the images.
@@ -61,11 +57,11 @@ A key aspect of this project is the use of two distinct models:
 ## Results
 The model achieves excellent performance on the test set, demonstrating its effectiveness in classifying soybean diseases.
 
-- **Precision:** `0.XX` (replace with your result)
-- **Recall:** `0.XX` (replace with your result)
-- **F1-Score:** `0.XX` (replace with your result)
+- **Precision:** `0.9778` 
+- **Recall:** `0.9774` 
+- **F1-Score:** `0.9775`
 
 ### Confusion Matrix
 The confusion matrix below illustrates the model's classification performance across all disease categories on the test set.
 
-*(Replace this with the image generated by your code, e.g., `confusion_matrix.svg`)*
+<img src = "/images/confusion_matrix.svg">
